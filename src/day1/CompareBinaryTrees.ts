@@ -15,5 +15,10 @@ export default function compare(a: BinaryNode<number> | null, b: BinaryNode<numb
         return false;
     }
     
+    // // structural && value check , this can replace the top 2 return false function if not forcing strict checking
+    // if (a?.value !== b?.value) {
+    //     return false;
+    // }
+    
     return compare(a.left, b.left) && compare(a.right, b.right);
 }
