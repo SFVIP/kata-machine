@@ -3,6 +3,10 @@ export default function bfs(
         source: number,
         needle: number): number[] | null {
     
+    if (source === needle) {
+        return [needle];
+    }
+    
     const seen = new Array(graph.length).fill(false);
     const prev = new Array(graph.length).fill(-1);
     
